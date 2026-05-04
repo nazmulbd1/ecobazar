@@ -6,26 +6,18 @@ import useOutsideClick from "../hooks/outsideClick";
 import { Link } from "react-router";
 
 const TopBar = () => {
-  let [open, setOpen] = useState(false)
+  let [langOpen, setLangOpen] = useState(false)
   let [openUSD, setOpenUSD] = useState(false)
 
   const dropdownRef = useRef(null)
   const dropdownUSDRef = useRef(null)
 
-  useOutsideClick(dropdownRef, ()=>setOpen(false), open)
+  useOutsideClick(dropdownRef, ()=>setLangOpen(false), langOpen)
   useOutsideClick(dropdownUSDRef, ()=>setOpenUSD(false), openUSD)
 
+  const [selectedLang, setSelectedLang] = useState('ENG')
 
-
-  // let dropRefLan = useRef(null);
-
-  // let handleClickLanDrop = () => {
-  //   if (dropRefLan.current.style.display == "block") {
-  //     dropRefLan.current.style.display = "none";
-  //   } else {
-  //     dropRefLan.current.style.display = "block";
-  //   }
-  // };
+  const langOptions = ['ENG', 'BAN', 'HIN', 'CHN']
 
   return (
     <div className="border-b border-solid border-b-gry text-sm font-pop text-ttopbar py-3.25">
@@ -35,14 +27,19 @@ const TopBar = () => {
             <CiLocationOn />
             Store Location: Lincoln- 344, Illinois, Chicago, USA
           </div>
-          <div className="flex gap-x-5">
-            <div onClick={()=>setOpen(!open)} className="flex items-center" ref={dropdownRef}>
-              Eng <FaAngleDown />
-              {open && 
-              <div className="absolute top-[35px] bg-gry p-3">
+          <div className="flex gap-x-6">
+            <div onClick={()=>setLangOpen(!langOpen)} className="relative flex justify-around cursor-pointer items-center select-none gap-x-1 hover:bg-gray-200" ref={dropdownRef}>
+              {selectedLang}
+              <FaAngleDown className={`transition transform duration-300 ${langOpen && 'rotate-180'}`}/>
+              {langOpen && 
+              <div className="absolute top-[35px] bg-white shadow">
                 <ul>
-                  <li>Bn</li>
-                  <li>Ch</li>
+                  {
+                    langOptions.map((item, index)=>(
+                      <li key={index} 
+                      className={`px-4 py-2 hover:bg-gray-200 ${selectedLang === item ? 'bg-gray-200' : ''}`} onClick={()=>{setSelectedLang(item); setLangOpen(false)}}>{item}</li>
+                    ))
+                  }
                 </ul>
               </div>
               }
@@ -71,4 +68,3 @@ const TopBar = () => {
 
 export default TopBar;
 
-//45 min (after::)
