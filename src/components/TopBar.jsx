@@ -16,8 +16,10 @@ const TopBar = () => {
   useOutsideClick(dropdownUSDRef, ()=>setOpenUSD(false), openUSD)
 
   const [selectedLang, setSelectedLang] = useState('ENG')
+  const [selectedCrncy, setSelectedCrncy] = useState('USD')
 
   const langOptions = ['ENG', 'BAN', 'HIN', 'CHN']
+  const currencyOptions = ['USD', 'BDT', 'CNY', 'JPY']
 
   return (
     <div className="border-b border-solid border-b-gry text-sm font-pop text-ttopbar py-3.25">
@@ -28,11 +30,11 @@ const TopBar = () => {
             Store Location: Lincoln- 344, Illinois, Chicago, USA
           </div>
           <div className="flex gap-x-6">
-            <div onClick={()=>setLangOpen(!langOpen)} className="relative flex justify-around cursor-pointer items-center select-none gap-x-1 hover:bg-gray-200" ref={dropdownRef}>
+            <div onClick={()=>setLangOpen(!langOpen)} className="relative flex justify-around cursor-pointer items-center gap-x-1 hover:bg-gray-200" ref={dropdownRef}>
               {selectedLang}
               <FaAngleDown className={`transition transform duration-300 ${langOpen && 'rotate-180'}`}/>
               {langOpen && 
-              <div className="absolute top-[35px] bg-white shadow">
+              <div className="absolute top-full bg-white shadow">
                 <ul>
                   {
                     langOptions.map((item, index)=>(
@@ -44,13 +46,17 @@ const TopBar = () => {
               </div>
               }
             </div>
-            <div onClick={()=>setOpenUSD(!openUSD)} className="flex items-center" ref={dropdownUSDRef}>
-              USD <FaAngleDown />
+            <div onClick={()=>setOpenUSD(!openUSD)} className="relative flex justify-around cursor-pointer items-center gap-x-1 hover:bg-gray-200" ref={dropdownUSDRef}>
+              {selectedCrncy} <FaAngleDown className={`transition transform duration-300 ${openUSD && 'rotate-180'}`}/>
               {openUSD && 
-              <div className="absolute top-[35px] bg-gry p-3">
+              <div className="absolute top-full bg-white shadow">
                 <ul>
-                  <li>TK</li>
-                  <li>YN</li>
+                  {
+                    currencyOptions.map((item, index)=>(
+                      <li key={index} 
+                      className={`px-4 py-2 hover:bg-gray-200 ${selectedCrncy === item ? 'bg-gray-200' : ''}`} onClick={()=>{setSelectedCrncy(item); setOpenUSD(false)}}>{item}</li>
+                    ))
+                  }
                 </ul>
               </div>
               }
