@@ -30,7 +30,7 @@ const TopBar = () => {
             Store Location: Lincoln- 344, Illinois, Chicago, USA
           </div>
           <div className="flex gap-x-6">
-            <div onClick={()=>setLangOpen(!langOpen)} className="relative flex justify-around cursor-pointer items-center gap-x-1 hover:bg-gray-200" ref={dropdownRef}>
+            <div onClick={()=>setLangOpen(!langOpen)} className="relative flex justify-around cursor-pointer items-center gap-x-1" ref={dropdownRef}>
               {selectedLang}
               <FaAngleDown className={`transition transform duration-300 ${langOpen && 'rotate-180'}`}/>
               {langOpen && 
@@ -46,7 +46,7 @@ const TopBar = () => {
               </div>
               }
             </div>
-            <div onClick={()=>setOpenUSD(!openUSD)} className="relative flex justify-around cursor-pointer items-center gap-x-1 hover:bg-gray-200" ref={dropdownUSDRef}>
+            <div onClick={()=>setOpenUSD(!openUSD)} className="relative flex justify-around cursor-pointer items-center gap-x-1" ref={dropdownUSDRef}>
               {selectedCrncy} <FaAngleDown className={`transition transform duration-300 ${openUSD && 'rotate-180'}`}/>
               {openUSD && 
               <div className="absolute top-full bg-white shadow">
