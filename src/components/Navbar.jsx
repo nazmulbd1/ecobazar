@@ -16,7 +16,7 @@ const Navbar = () => {
                 <li className="px-5 py-5 text-white text-[20px] bg-primary mr-64">
                   <FaBars />
                 </li>
-                <li className="text-md text-white font-bold bg-[#333333] absolute top-0 left-15 p-5">
+                <li className="text-[16px] text-white bg-[#333333] absolute top-0 left-15 px-5 py-[18.5px]">
                   <Link to="#" className="flex items-center gap-x-3 pr-5.5">
                     <span className="pr-16">All Categories</span>
                     <FaAngleDown />
