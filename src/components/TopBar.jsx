@@ -34,8 +34,8 @@ const TopBar = () => {
               {selectedLang}
               <FaAngleDown className={`transition transform duration-300 ${langOpen && 'rotate-180'}`}/>
               {langOpen && 
-              <div className="absolute top-full bg-white shadow">
-                <ul>
+              <div className="absolute top-full bg-white shadow z-50">
+                <ul className="">
                   {
                     langOptions.map((item, index)=>(
                       <li key={index} 
@@ -49,7 +49,7 @@ const TopBar = () => {
             <div onClick={()=>setOpenUSD(!openUSD)} className="relative flex justify-around cursor-pointer items-center gap-x-1" ref={dropdownUSDRef}>
               {selectedCrncy} <FaAngleDown className={`transition transform duration-300 ${openUSD && 'rotate-180'}`}/>
               {openUSD && 
-              <div className="absolute top-full bg-white shadow">
+              <div className="absolute top-full bg-white shadow z-50">
                 <ul>
                   {
                     currencyOptions.map((item, index)=>(

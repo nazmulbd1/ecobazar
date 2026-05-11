@@ -16,12 +16,12 @@ const SearchBar = () => {
             </div>
             <div className="relative">
               <input
-                className="border border-[#E6E6E6] w-[400px] py-3 px-11 placeholder:text-[#808080] placeholder:font-pop placeholder:text-sm rounded-l-md rounded-r-none"
+                className="border border-[#E6E6E6] w-[400px] py-3 px-11 placeholder:text-[#808080] placeholder:font-pop placeholder:text-sm rounded-md"
                 type="text"
                 placeholder="Search"
               />
               <LuSearch className="absolute top-0 translate-y-1/2 left-4 text-2xl" />
-              <button className="font-pop font-semibold text-sm bg-primary text-white px-6 py-3.75 ml-[-1px] relative top-[-2px] rounded-tr-md rounded-br-md">
+              <button className="font-pop font-semibold text-sm bg-primary text-white px-6 py-3.75 ml-[-6px] relative top-[-2px] rounded-tr-md rounded-br-md">
                 Search
               </button>
             </div>

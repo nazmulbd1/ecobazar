@@ -23,33 +23,33 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="flex items-center gap-x-1 hover:text-white">
+                  <Link to="#" className="flex items-center gap-x-1 hover:text-white transform duration-300">
                     Home <FaAngleDown />
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="flex items-center gap-x-1 hover:text-white">
+                  <Link to="#" className="flex items-center gap-x-1 hover:text-white transform duration-300">
                     Shop <FaAngleDown />
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="flex items-center gap-x-1 hover:text-white">
+                  <Link to="#" className="flex items-center gap-x-1 hover:text-white transform duration-300">
                     Pages <FaAngleDown />
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="flex items-center gap-x-1 hover:text-white">
+                  <Link to="#" className="flex items-center gap-x-1 hover:text-white transform duration-300">
                     Blog <FaAngleDown />
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="flex items-center gap-x-1 hover:text-white">
-                    About Us <FaAngleDown />
+                  <Link to="#" className="flex items-center gap-x-1 hover:text-white transform duration-300">
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="flex items-center gap-x-1 hover:text-white">
-                    Contact Us <FaAngleDown />
+                  <Link to="#" className="flex items-center gap-x-1 hover:text-white transform duration-300">
+                    Contact Us
                   </Link>
                 </li>
               </ul>

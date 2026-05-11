@@ -2,6 +2,11 @@ import React from 'react'
 import Container from './layouts/Container'
 import Footer_Logo from '../assets/images/Footer_Logo.webp'
 import { Link } from 'react-router'
+import ApplePay from '../assets/images/ApplePay.webp'
+import VisaPay from '../assets/images/Visa.webp'
+import DiscoverPay from '../assets/images/Discover.webp'
+import MasterCard from '../assets/images/Mastercard.webp'
+import SecurePay from '../assets/images/Cart.webp'
 
 const Footer = () => {
   return (
@@ -51,6 +56,18 @@ const Footer = () => {
                         <li className='hover:text-white'>Meat & Fish</li>
                         <li className='hover:text-white'>Bread & Bakery</li>
                         <li className='hover:text-white'>Beauty & Health</li>
+                    </ul>
+                </div>
+            </div>
+            <div className='flex justify-between text-white text-sm py-5 border-t border-[#999999]'>
+                <div className='text-[#999999]'>Ecobazar eCommerce © 2021. All Rights Reserved</div>
+                <div>
+                    <ul className='flex gap-x-2'>
+                        <li><Link><img src={ApplePay} alt="ApplePay" /></Link></li>
+                        <li><Link><img src={VisaPay} alt="VisaPay" /></Link></li>
+                        <li><Link><img src={DiscoverPay} alt="DiscoverPay" /></Link></li>
+                        <li><Link><img src={MasterCard} alt="MasterCard" /></Link></li>
+                        <li><Link><img src={SecurePay} alt="SecurePay" /></Link></li>
                     </ul>
                 </div>
             </div>
