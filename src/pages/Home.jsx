@@ -10,22 +10,11 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Link
-          to="/login"
-          className="text-[#1A1A1A] cursor-pointer hover:text-primary"
-        >
-          Login
-        </Link>
-        <br />
-        <Link
-          to="/registration"
-          className="text-[#1A1A1A] cursor-pointer hover:text-primary"
-        >
-          Register
-        </Link>
+        <div>Home</div>
       </Container>
     </>
   );
 };
 
 export default Home;
+
