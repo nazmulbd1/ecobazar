@@ -2,7 +2,7 @@ import React from 'react'
 import BreadCrumbBanner from '../assets/images/Breadcrumb-Banner.webp'
 import Container from './layouts/Container'
 import { GrHomeRounded } from "react-icons/gr";
-import { useLocation } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 const Breadcrumb = () => {
   let pageName = useLocation()
@@ -12,7 +12,7 @@ const Breadcrumb = () => {
     <div style={{background: `url(${BreadCrumbBanner})`}}>
         <Container>
           <div className='flex items-center gap-2 py-5'>
-            <GrHomeRounded className='text-2xl text-[#808080]'/>
+            <Link to='/'><GrHomeRounded className='text-2xl text-[#808080]'/></Link>
             {
               arr.map((item, index)=>(
                 <span key={index} className='font-pop text-[16px] text-[#999999]'>

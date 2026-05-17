@@ -4,6 +4,7 @@ import Logo from "../assets/images/Logo.webp";
 import { LuSearch } from "react-icons/lu";
 import Heart from "../icons/Heart";
 import { BsHandbag } from "react-icons/bs";
+import { Link } from "react-router";
 
 const SearchBar = () => {
   return (
@@ -12,7 +13,7 @@ const SearchBar = () => {
         <Container>
           <div className="flex justify-between my-6">
             <div>
-              <img src={Logo} alt="Logo" fetchPriority="high" loadin="lazy" />
+              <Link to="/"><img src={Logo} alt="Logo" fetchPriority="high" loadin="lazy" /></Link>
             </div>
             <div className="relative">
               <input

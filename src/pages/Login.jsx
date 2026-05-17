@@ -19,8 +19,8 @@ const Login = () => {
       />
       <div className="flex justify-between my-4">
         <div className="flex items-center text-[#666666]">
-          <input type="checkbox" className="mr-2" />
-          <label className="font-pop text-sm">Remember me</label>
+          <input id="agree" type="checkbox" className="mr-2" />
+          <label htmlFor="agree" className="font-pop text-sm">Remember me</label>
         </div>
         <p className="text-center text-sm text-[#999999]"><Link to='/forgot-password' className="text-primary cursor-pointer">Forgot Password?</Link></p>
       </div>

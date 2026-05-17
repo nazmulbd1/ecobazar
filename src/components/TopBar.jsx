@@ -61,9 +61,9 @@ const TopBar = () => {
               </div>
               }
             </div>
-            <div className="flex items-center relative after:w-[2px] after:h-[15px] after:bg-ctopbar after:content-[''] after:absolute after:top-[2px] after:left-[-10px]">
-              <Link to="/login">Sign In</Link> / 
-              <Link to="/registration">Sign Up</Link> 
+            <div className="gap-x-1 flex items-center relative after:w-[2px] after:h-[15px] after:bg-ctopbar after:content-[''] after:absolute after:top-[2px] after:left-[-10px]">
+              <Link to="/login" className="hover:text-primary">Sign In</Link> / 
+              <Link to="/registration" className="hover:text-primary">Sign Up</Link> 
             </div>
           </div>
         </div>
