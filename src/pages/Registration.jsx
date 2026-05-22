@@ -99,4 +99,3 @@ const Registration = () => {
 
 export default Registration
 
-// 1h 7 min
