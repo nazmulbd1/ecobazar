@@ -22,7 +22,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="flex justify-around border border-0 rounded-lg shadow-lg my-6">
+        <div className="flex justify-around border border-0 rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] my-6">
           <div className="flex items-center py-10">
             <div className="pr-4">
               <Delivery/>

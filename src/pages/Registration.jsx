@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router'
 import { FaR, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const Registration = () => {
+
   let navigate = useNavigate()
   const [regData, setRegData] = useState({
     email: "",
@@ -67,23 +68,25 @@ const Registration = () => {
       {errorMsg && <p className='bg-red-500 mb-2 text-center rounded'>{errorMsg}</p>}
       {successMsg && <p className='bg-green-500 mb-2 text-center rounded'>{successMsg}</p>}
       <input onChange={handleChange} name='email' type="email" placeholder='Email' className='w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md text-[16px]'/>
+
       <div className='relative'>
         <input onChange={handleChange} name='password' type={eyeShow? 'text':'password'} placeholder="Password" className='w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 my-4 rounded-md text-[16px] pr-10' />
         <div className='absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600' onClick={()=>setEyeShow(!eyeShow)}>
           {eyeShow ?
-          <FaRegEyeSlash />
-          :
           <FaRegEye />
+          :
+          <FaRegEyeSlash />
           }
         </div>
       </div>
+      
       <div className='relative'>
         <input onChange={handleChange} name='confirmPassword' type={eyeShowConfirm? 'text':'password'} placeholder='Confirm Password' className='w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md text-[16px] pr-10' />
         <div className='absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600' onClick={()=>setEyeShowConfirm(!eyeShowConfirm)}>
           {eyeShowConfirm ?
-          <FaRegEyeSlash/>
-          :
           <FaRegEye/>
+          :
+          <FaRegEyeSlash/>
           }
         </div>
       </div>

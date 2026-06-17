@@ -3,6 +3,7 @@ import Container from "./layouts/Container";
 import Product1 from "../assets/images/Product1.webp";
 import { Link } from "react-router";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { MoveRight } from "lucide-react";
 
 const ProductShowcase = ({ allData }) => {
 
@@ -27,12 +28,15 @@ const ProductShowcase = ({ allData }) => {
   return (
     <div>
       <Container>
-        <h2>Popular Categories</h2>
-        <Link to="/category">View All</Link>
+        <div className="flex justify-between items-center font-pop py-4 mb-4 mt-10 ">
+          <h2 className="font-semibold text-[32px] text-[#1A1A1A]">Popular Categories</h2>
+          <Link to="/category" className="flex gap-2 text-primary">View All <MoveRight/> </Link>
+        </div>
+
         <div className="flex gap-5 flex-wrap">
           {allData.map((item) => (
-            <div className="border border-red-500 max-w-[14.66%] p-6">
-              <img src={Product1} alt="Product1" />
+            <div className="border border-[1px] border-gray-50 shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] rounded-md max-w-[14.66%] p-6 hover:border-[1px] hover:border-primary">
+              <img src={Product1} alt="Product1" className="w-full" />
               <h3>{item.name || item.title}</h3>
               <p>{item.price && item.price}</p>
 
