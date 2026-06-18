@@ -40,8 +40,8 @@ const Navbar = () => {
                         <div>
                           <ul>
                             <li className="flex items-center gap-1.5 pt-6 pl-4 pr-4 pb-6">
-                              <input type="text" placeholder="Search" className="px-3 py-3 border border-gray-300 rounded p-2 text-[16px] w-[90%] placeholder:text-[16px] placeholder:text-gray-400 focus:ring-2 focus:ring-primary outline-none"/>
-                              <Search className="hover:text-gray-700 cursor-pointer"/>
+                              <input type="relative text" placeholder="Search" className="pl-4 pr-12 py-3 border border-gray-300 rounded-[50px] text-[16px] w-[100%] placeholder:text-[16px] placeholder:text-gray-400 focus:ring-2 focus:ring-primary outline-none"/>
+                              <Search className="absolute right-[28px] hover:text-gray-700 cursor-pointer"/>
                             </li>
 
                             {allCatagories.map((item, index) =>(
