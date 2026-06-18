@@ -3,20 +3,20 @@ import React, { useEffect, useState } from "react";
 import ProductShowcase from "../components/ProductShowcase";
 
 const Category = () => {
-  let [allPro, setAllPro] = useState([]);
+  let [allCategory, setAllCategory] = useState([]);
 
   useEffect(() => {
     async function allData() {
-      let proData = await axios.get(
+      let categoryData = await axios.get(
         "https://dummyjson.com/products/categories",
       );
-      setAllPro(proData.data);
+      setAllCategory(categoryData.data);
     }
     allData();
   }, []);
 
   return (
-    <ProductShowcase allData={allPro}/>
+    <ProductShowcase allData={allCategory} title="Popular Categories"/>
   )
 };
 

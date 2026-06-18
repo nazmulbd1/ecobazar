@@ -46,7 +46,7 @@ const Navbar = () => {
 
                             {allCatagories.map((item, index) =>(
                               <li key={item.name} className="text-[16px] font-pop text-gray-700 cursor-pointer">
-                                <span className="group flex justify-between px-4 py-4 border-b border-gray-300 hover:bg-primary hover:text-white transition duration-300">
+                                <span className="group flex justify-between px-4 py-4 border-b border-gray-300 hover:rounded hover:bg-primary hover:text-white transition duration-300">
                                   {item.name} 
                                   {<ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>}
                                 </span>

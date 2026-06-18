@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import Banner from "../components/Banner";
 import ProductShowcase from "../components/ProductShowcase";
 import axios from "axios";
+import Offer from "../components/Offer";
 
 const Home = () => {
   let [allPro, setAllPro] = useState([])
@@ -28,8 +29,9 @@ const Home = () => {
   return (
     <>
       <Banner/>
-      <ProductShowcase allData={allCategory}/>
-      <ProductShowcase allData={allPro}/>
+      <ProductShowcase allData={allCategory} title="Popular Categories"/>
+      <ProductShowcase allData={allPro} title="Popular Products" />
+      <Offer/>
     </>
   );
 };

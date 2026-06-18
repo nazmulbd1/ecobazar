@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { MoveRight } from "lucide-react";
 
-const ProductShowcase = ({ allData }) => {
+const ProductShowcase = ({ allData, title }) => {
 
   function getStar(count) {
     let halfStar = count.toString().split('.')[1]
@@ -29,28 +29,29 @@ const ProductShowcase = ({ allData }) => {
     <div>
       <Container>
         <div className="flex justify-between items-center font-pop py-4 mb-4 mt-10 ">
-          <h2 className="font-semibold text-[32px] text-[#1A1A1A]">Popular Categories</h2>
+          <h2 className="font-semibold text-[32px] text-[#1A1A1A]">{title}</h2>
           <Link to="/category" className="flex gap-2 text-primary">View All <MoveRight/> </Link>
         </div>
 
         <div className="flex gap-5 flex-wrap">
-          {allData.map((item) => (
-            <div className="border border-[1px] border-gray-50 shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] rounded-md max-w-[14.66%] p-6 hover:border-[1px] hover:border-primary">
+          {allData.map((item, index) => (
+            <div key={item.id} className="border border-[1px] border-gray-50 shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] rounded-md max-w-[14.66%] p-6 hover:border-[1px] hover:border-primary">
               <img src={Product1} alt="Product1" className="w-full" />
-              <h3>{item.name || item.title}</h3>
+
+              <h3>{item.name || item.title }</h3>
               <p>{item.price && item.price}</p>
 
               <p>{item.rating && item.rating}</p>
               <div className="flex">
                 {item.rating &&
-                  getStar(item.rating).map((item) =>
-                    item == "color" ? (
-                      <FaStar className="text-yellow-300" />
+                  getStar(item.rating).map((star, i) =>
+                    star == "color" ? (
+                      <FaStar key={i} className="text-yellow-300" />
                     ) : (
-                      item == "half" ?
-                      <FaStarHalfAlt className="text-yellow-300"/>
+                      star == "half" ?
+                      <FaStarHalfAlt key={i} className="text-yellow-300"/>
                       :
-                      <FaStar />
+                      <FaStar key={i}/>
                     ),
                   )}
               </div>
