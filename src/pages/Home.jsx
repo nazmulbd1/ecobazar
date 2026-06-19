@@ -5,10 +5,13 @@ import Banner from "../components/Banner";
 import ProductShowcase from "../components/ProductShowcase";
 import axios from "axios";
 import Offer from "../components/Offer";
+import BannerBig from "../assets/images/Bannar_Big.webp";
+import { X } from "lucide-react";
 
 const Home = () => {
   let [allPro, setAllPro] = useState([])
   let [allCategory, setAllCategory] = useState([])
+  let [showImg, setShowImg] = useState(false)
 
   useEffect(()=>{
     async function allPro(){
@@ -29,9 +32,20 @@ const Home = () => {
   return (
     <>
       <Banner/>
-      <ProductShowcase allData={allCategory} title="Popular Categories"/>
-      <ProductShowcase allData={allPro} title="Popular Products" />
+      <ProductShowcase allData={allCategory} title="Popular Categories" type="category"/>
+      <ProductShowcase allData={allPro} title="Popular Products" type="product" />
       <Offer/>
+      <ProductShowcase allData={allPro} title="Hot Deals" type="hotdeal" />
+      
+      <img onClick={()=> setShowImg(true)} width={100} src={BannerBig} alt="BannerBig" />
+      {showImg && 
+        <div className="w-full h-screen bg-[#00000071] fixed  top-0 left-0 z-20 flex justify-center items-center">
+        <img src={BannerBig} alt="BannerBig" className=""/>
+        <button onClick={()=> setShowImg(false)} className="text-white"><X/></button>
+      </div>
+      }
+      
+      
     </>
   );
 };
