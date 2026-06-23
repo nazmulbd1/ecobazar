@@ -50,6 +50,9 @@ const Home = () => {
       <ProductShowcase allData={allPro.slice(0, 10)} title="Popular Products" type="product" link="/product"/>
       <Offer/>
       <ProductShowcase allData={allPro.slice(0, 10)} title="Hot Deals" type="hotdeal" link="/product"/>
+      <FeaturedPro allData={allPro.slice(0, 5)} title="Feature Products" type="featurepro" link="/product"/>
+      <LatestNews/>
+      <Testimonial/>
       
       <img onClick={()=> handleClick(BannerBig)} width={100} src={BannerBig} alt="BannerBig" />
       <img onClick={()=> handleClick(Banner1)} width={100} src={Banner1} alt="Banner1" />
@@ -61,9 +64,7 @@ const Home = () => {
           </div>
       </div>
       )}
-      <FeaturedPro allData={allPro.slice(0, 5)} title="Feature Products" type="featurepro" link="/product"/>
-      <LatestNews/>
-      <Testimonial/>
+
 
     </>
   );
