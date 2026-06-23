@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import MainLayouts from "./components/layouts/MainLayouts";
 import Faq from "./pages/Faq";
 import Category from "./pages/Category";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/faq"  element={<Faq/>}/>
           <Route path="/category" element={<Category/>}/>
+          <Route path="/product" element={<Product/>}/>
         </Route>
       </Routes>
     </>
