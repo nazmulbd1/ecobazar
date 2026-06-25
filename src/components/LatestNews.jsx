@@ -15,9 +15,10 @@ const LatestNews = () => {
             Latest News
           </h3>
           <div className="flex gap-6">
-            <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden">
-              <div className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform hover:scale-[1.03]">
-                <img src={Latestnews1} alt="Latestnews1" />
+
+            <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
+              <div >
+                <img src={Latestnews1} alt="Latestnews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
                 <div className="px-6 py-6">
                   <div className="flex gap-6">
                     <div className="flex items-center text-[16px] text-[#4D4D4D] font-pop gap-1.5">
@@ -31,7 +32,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5">
+                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5 group-hover:text-[#05b40b] transition-transform ease-in-out duration-300">
                       Curabitur porttitor orci eget neque accumsan venenatis.
                       Nunc fermentum.
                     </p>
@@ -46,9 +47,9 @@ const LatestNews = () => {
               </div>
             </div>
 
-            <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden">
-              <div className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform hover:scale-[1.03]">
-                <img src={Latestnews1} alt="Latestnews1" />
+            <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
+              <div >
+                <img src={Latestnews1} alt="Latestnews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
                 <div className="px-6 py-6">
                   <div className="flex gap-6">
                     <div className="flex items-center text-[16px] text-[#4D4D4D] font-pop gap-1.5">
@@ -62,7 +63,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5">
+                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5 group-hover:text-[#05b40b] transition-transform ease-in-out duration-300">
                       Curabitur porttitor orci eget neque accumsan venenatis.
                       Nunc fermentum.
                     </p>
@@ -77,9 +78,9 @@ const LatestNews = () => {
               </div>
             </div>
 
-            <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden">
-              <div className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform hover:scale-[1.03]">
-                <img src={Latestnews1} alt="Latestnews1" />
+            <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
+              <div >
+                <img src={Latestnews1} alt="Latestnews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
                 <div className="px-6 py-6">
                   <div className="flex gap-6">
                     <div className="flex items-center text-[16px] text-[#4D4D4D] font-pop gap-1.5">
@@ -93,7 +94,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5">
+                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5 group-hover:text-[#05b40b] transition-transform ease-in-out duration-300">
                       Curabitur porttitor orci eget neque accumsan venenatis.
                       Nunc fermentum.
                     </p>

@@ -18,6 +18,51 @@
     --font-pop: "Poppins", sans-serif; 
 }
 
+/* Banner Swiper slider start */
+.review-swiper-button-next, .review-swiper-button-prev {
+  background: rgba(201, 199, 199, 0.377);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.swiper-button-disabled {
+  background: rgba(145, 144, 144, 0.212);
+  cursor: not-allowed;
+  color: rgba(19, 19, 19, 0.322);
+}
+
+.review-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.review-swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* .swiper-pagination-bullet {
+  background: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+} */
+
+
+/* Banner Swiper slider end */
+
 /* sidebar nav section */
 #checkbox {
   display: none;
@@ -66,15 +111,3 @@
 }
 
 
-
-/* #checkbox:checked + .toggle .bars {
-  margin-left: 13px;
-} */
-
-/* #checkbox:checked + .toggle #bar3 {
-  transform: rotate(90deg);
-  transition-duration: .3s;
-  transform-origin:right;
-} */
-
-/* sidebar nav section */
