@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Banner = () => {
@@ -22,18 +22,23 @@ const Banner = () => {
       <Container>
         {/* Banner start */}
         <div className="flex gap-x-6 pt-6">
-          <div className="max-w-[872px] relative">
+          <div className="one max-w-[872px] relative">
+            {/* 1st img pegination */}
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
               navigation={{
-                nextEl: '.review-swiper-button-next',
-                prevEl: '.review-swiper-button-prev',
+                prevEl: ".review-swiper-button-prev",
+                nextEl: ".review-swiper-button-next",
               }}
-              pagination={true}
-              modules={[Navigation, Pagination]} 
+              scrollbar={{
+                hide: true,
+              }}
+              autoplay={true}
+              loop={true}
+              modules={[Navigation, Scrollbar, Autoplay]}
             >
               <SwiperSlide>
                 <img className="max-w-[872px]" src={BannerBig} alt="Banner" />
@@ -50,16 +55,79 @@ const Banner = () => {
             </Swiper>
 
             <div className="review-swiper-button-prev text-gray-800">
-              <FaChevronRight size={20}/>
-            </div>
-            <div className="review-swiper-button-next text-gray-800">
               <FaChevronLeft size={20} />
             </div>
-
+            <div className="review-swiper-button-next text-gray-800">
+              <FaChevronRight size={20} />
+            </div>
           </div>
+
           <div className="max-w-[423px]">
-            <img src={Banner1} alt="Banner1" />
-            <img src={Banner2} className="mt-6" alt="Banner2" />
+            <div className="two">
+              {/* 2nd img pegination */}
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                onSlideChange={() => console.log("slide change")}
+                onSwiper={(swiper) => console.log(swiper)}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 2500, // Time between transitions in ms (2.5s)
+                  disableOnInteraction: false, // Continue autoplay after user swipe
+                  pauseOnMouseEnter: true, // Pause autoplay when hovering
+                }}
+                loop={true}
+                modules={[Pagination, Autoplay]}
+              >
+                <SwiperSlide>
+                  <img src={Banner1} alt="Banner1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={Banner1} alt="Banner1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={Banner1} alt="Banner1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={Banner1} alt="Banner1" />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+
+            {/* 3rd img pegination start */}
+            <div className="three mt-6 h-[288px]">
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 2500, 
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                direction='vertical'
+                className="h-full"
+                modules={[Pagination, Autoplay]}
+              >
+                <SwiperSlide>
+                  <img className="w-full h-full" src={Banner2} alt="Banner2" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img className="w-full h-full" src={Banner2} alt="Banner2" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img className="w-full h-full" src={Banner2} alt="Banner2" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img className="w-full h-full" src={Banner2} alt="Banner2" />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            {/* 3rd img pegination end */}
           </div>
         </div>
 

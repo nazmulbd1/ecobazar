@@ -19,7 +19,7 @@
 }
 
 /* Banner Swiper slider start */
-.review-swiper-button-next, .review-swiper-button-prev {
+.one .review-swiper-button-prev, .review-swiper-button-next {
   background: rgba(201, 199, 199, 0.377);
   width: 40px;
   height: 40px;
@@ -30,20 +30,20 @@
   cursor: pointer;
 }
 
-.swiper-button-disabled {
+.one .swiper-button-disabled {
   background: rgba(145, 144, 144, 0.212);
   cursor: not-allowed;
   color: rgba(19, 19, 19, 0.322);
 }
 
-.review-swiper-button-next {
+.one .review-swiper-button-prev {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   z-index: 5;
 }
-.review-swiper-button-prev {
+.one .review-swiper-button-next {
   position: absolute;
   top: 50%;
   right: 0;
@@ -51,16 +51,105 @@
   z-index: 5;
 }
 
-/* .swiper-pagination-bullet {
-  background: red;
+.swiper-scrollbar {
+  background: rgba(85, 85, 85, 0.363);
+  height: 5px;
+  border-radius: 20px;
+  position: absolute;
+  width: 99%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; 
+}
+
+.swiper-scrollbar-drag {
+  background: rgba(0, 0, 0, 0.5);
+  height: 5px;
+  border-radius: 20px;
+}
+
+
+
+/* two img star */
+.two .review-swiper-button-prev, .review-swiper-button-next {
+  background: rgba(201, 199, 199, 0.377);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.two .swiper-button-disabled {
+  background: rgba(145, 144, 144, 0.212);
+  cursor: not-allowed;
+  color: rgba(19, 19, 19, 0.322);
+}
+
+.two .review-swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.two .review-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.two .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.411);
   width: 10px;
   height: 10px;
   border-radius: 50%;
   display: inline-block;
   margin: 0 5px;
-} */
+}
+
+.two .swiper-pagination-bullet-active {
+  background: rgba(0, 0, 0, 0.836);
+}
+
+.two .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
 
 
+
+
+/* three img star */
+
+.three .swiper-pagination-bullet {
+  background: rgba(221, 1, 192, 0.411);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 5px 0px;
+}
+
+.three .swiper-pagination-bullet-active {
+  background: rgba(250, 2, 2, 0.836);
+}
+
+.three .swiper-pagination {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
 /* Banner Swiper slider end */
 
 /* sidebar nav section */
