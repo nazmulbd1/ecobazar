@@ -34,11 +34,11 @@ const ProductShowcase = ({ allData, title, type, link }) => {
           </Link>
         </div>
 
-        <div className={`flex pb-15 ${type == "category" && "gap-5"} flex-wrap`}>
+        <div className={`flex ${type == "category" && "gap-5"} flex-wrap`}>
           {allData.map((item, index) => (
             <div
               key={item.id}
-              className={`relative text-[18px] border border-[1px] border-[#E5E5E5]  p-6 hover:border-[1px] hover:border-primary ${type == "category" ? "max-w-[15.40%] shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] rounded-md" : "max-w-[20%] "} group`}
+              className={`relative text-[18px] border border-[1px] border-[#E5E5E5] p-6 hover:border-[1px] hover:border-primary ${type == "category" ? "max-w-[15.40%] shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] rounded-md" : "max-w-[20%] "} group`}
             >
               <img src={Product1} alt="Product1" className="w-full" />
 

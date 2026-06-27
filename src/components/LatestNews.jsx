@@ -32,13 +32,13 @@ const LatestNews = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5 group-hover:text-[#05b40b] transition-transform ease-in-out duration-300">
+                    <p className="text-[18px] text-[#1A1A1A] font-pop font-medium pt-2 pb-5 group-hover:text-[#2C742F] transition-transform ease-in-out duration-300">
                       Curabitur porttitor orci eget neque accumsan venenatis.
                       Nunc fermentum.
                     </p>
                     <Link
                       to="#"
-                      className="flex gap-2 text-[16px] text-[#00B207]"
+                      className="flex gap-2 text-[16px] font-semibold text-[#00B207] hover:text-[#008805]"
                     >
                       Read More <MoveRight />{" "}
                     </Link>
@@ -63,13 +63,13 @@ const LatestNews = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5 group-hover:text-[#05b40b] transition-transform ease-in-out duration-300">
+                    <p className="text-[18px] text-[#21A1A1A] font-pop font-medium pt-2 pb-5 group-hover:text-[#2C742F] transition-transform ease-in-out duration-300">
                       Curabitur porttitor orci eget neque accumsan venenatis.
                       Nunc fermentum.
                     </p>
                     <Link
                       to="#"
-                      className="flex gap-2 text-[16px] text-[#00B207]"
+                      className="flex gap-2 text-[16px] font-semibold text-[#00B207] hover:text-[#008805]"
                     >
                       Read More <MoveRight />{" "}
                     </Link>
@@ -94,13 +94,13 @@ const LatestNews = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[18px] text-[#2C742F] font-pop font-medium pt-2 pb-5 group-hover:text-[#05b40b] transition-transform ease-in-out duration-300">
+                    <p className="text-[18px] text-[#1A1A1A] font-pop font-medium pt-2 pb-5 group-hover:text-[#2C742F] transition-transform ease-in-out duration-300">
                       Curabitur porttitor orci eget neque accumsan venenatis.
                       Nunc fermentum.
                     </p>
                     <Link
                       to="#"
-                      className="flex gap-2 text-[16px] text-[#00B207]"
+                      className="flex gap-2 text-[16px] font-semibold text-[#00B207] hover:text-[#008805]"
                     >
                       Read More <MoveRight />{" "}
                     </Link>

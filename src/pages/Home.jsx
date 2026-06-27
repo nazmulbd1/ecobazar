@@ -12,12 +12,11 @@ import useOutsideClick from "../hooks/outsideClick";
 import FeaturedPro from "../components/FeaturedPro";
 import LatestNews from "../components/LatestNews";
 import Testimonial from "../components/Testimonial";
+import FollowUs from "../components/FollowUs";
 
 const Home = () => {
   let [allPro, setAllPro] = useState([])
   let [allCategory, setAllCategory] = useState([])
-  let [showImg, setShowImg] = useState(false)
-  let [image, setImage] = useState("")
 
   useEffect(()=>{
     async function allPro(){
@@ -35,14 +34,6 @@ const Home = () => {
     allCategory()
   }, []);
 
-  let handleClick = (imageUrl)=> {
-    setImage(imageUrl);
-    setShowImg(true);
-  }
-
-  const imageRef = useRef(null)
-  useOutsideClick(imageRef, ()=>setShowImg(false), showImg)
-
   return (
     <>
       <Banner/>
@@ -53,19 +44,7 @@ const Home = () => {
       <FeaturedPro allData={allPro.slice(0, 5)} title="Feature Products" type="featurepro" link="/product"/>
       <LatestNews/>
       <Testimonial/>
-      
-      <img onClick={()=> handleClick(BannerBig)} width={100} src={BannerBig} alt="BannerBig" />
-      <img onClick={()=> handleClick(Banner1)} width={100} src={Banner1} alt="Banner1" />
-      {showImg && (
-        <div className="w-full h-screen bg-[#00000071] fixed  top-0 left-0 z-20 flex justify-center items-center">
-          <div ref={imageRef} className="relative">
-            <img src={image} alt="BannerBig"/>
-            <button onClick={()=> setShowImg(false)} className="absolute text-white right-[2px] top-[-22px]"><X/></button>
-          </div>
-      </div>
-      )}
-
-
+      <FollowUs/>
     </>
   );
 };

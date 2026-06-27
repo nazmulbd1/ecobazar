@@ -69,8 +69,6 @@
   border-radius: 20px;
 }
 
-
-
 /* two img star */
 .two .review-swiper-button-prev, .review-swiper-button-next {
   background: rgba(201, 199, 199, 0.377);
@@ -124,9 +122,6 @@
   transform: translateX(-50%);
   z-index: 5;
 }
-
-
-
 
 /* three img star */
 
@@ -199,4 +194,43 @@
   transform: rotate(-90deg);
 }
 
+/* Testimonial start */
+.test .review-swiper-button-prev, .review-swiper-button-next {
+  background: rgba(201, 199, 199, 0.377);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.test .swiper-button-disabled {
+  background: rgba(145, 144, 144, 0.212);
+  cursor: not-allowed;
+  color: rgba(19, 19, 19, 0.322);
+}
+
+.test .review-swiper-button-prev {
+  position: absolute;
+  top: -69px;
+  left: 93%;
+  z-index: 5;
+}
+.test .review-swiper-button-prev:hover {
+  background: rgb(3, 194, 3);
+  color: white;
+}
+
+.test .review-swiper-button-next {
+  position: absolute;
+  top: -69px;
+  right: 2px;
+  z-index: 5;
+}
+.test .review-swiper-button-next:hover {
+  background: rgb(3, 194, 3);
+  color: white;
+}
 
