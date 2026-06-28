@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./layouts/Container";
 import DiscountBanner from "../assets/images/DiscountBannar.webp";
 import { Link } from "react-router";
-import { MoveRight } from "lucide-react";
+import { Handbag, MoveRight } from "lucide-react";
 
 import Product1 from "../assets/images/Product1.webp";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
@@ -29,7 +29,7 @@ const FeaturedPro = ({ allData, title, type, link }) => {
   return (
     <div>
       <Container>
-        <div>
+        <div className="pt-15">
           <div>
             <img src={DiscountBanner} alt="DiscountBanner" />
           </div>
@@ -45,56 +45,37 @@ const FeaturedPro = ({ allData, title, type, link }) => {
             </div>
 
             <div
-              className={`flex pb-15 ${type == "category" && "gap-5"} flex-wrap`}
+              className="grid grid-cols-5 pb-15"
             >
               {allData.map((item, index) => (
                 <div
                   key={item.id}
-                  className={`relative text-[18px] border border-[1px] border-[#E5E5E5]  p-6 hover:border-[1px] hover:border-primary ${type == "category" ? "max-w-[15.40%] shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] rounded-md" : "max-w-[20%] "} group`}
+                  className="relative text-[14px] text-[#4D4D4D] border border-[1px] border-[#E5E5E5]  px-4 py-6 hover:border-[1px] hover:border-primary group"
                 >
-                  <img src={Product1} alt="Product1" className="w-full" />
+                  <img src={Product1} alt="Product1" className="w-full pb-6" />
 
+                  <div className="flex items-center justify-between">
+                    <div>
                   <h3>{item.name || item.title.slice(0, 16) + "..."}</h3>
-                  <p>{item.price && "$" + item.price}</p>
+                  <p className="text-[16px] text-[#1A1A1A]">{item.price && "$" + item.price}</p>
 
                   {/* <p>{item.rating && item.rating}</p> */}
                   <div className="flex">
                     {item.rating &&
                       getStar(item.rating).map((star, i) =>
                         star == "color" ? (
-                          <FaStar key={i} className="text-yellow-300" />
+                          <FaStar key={i} className="text-[#FF8A00]" />
                         ) : star == "half" ? (
-                          <FaStarHalfAlt key={i} className="text-yellow-300" />
+                          <FaStarHalfAlt key={i} className="text-[#FF8A00]" />
                         ) : (
                           <FaStar key={i} className="text-gray-400" />
                         ),
                       )}
                   </div>
-
-                  {type == "hotdeal" && (
-                    <div
-                      className={`${type == "hotdeal" && "bg-red-300 w-[201%] h-[201%] z-40 absolute m-2 top-[-8px] left-[-8px] hidden group-hover:block duration-200"}`}
-                    >
-                      <img src={Product1} alt="Product1" className="w-full" />
-                      <h3>{item.name || item.title.slice(0, 16) + "..."}</h3>
-                      <p>{item.price && "$" + item.price}</p>
-                      <div className="flex">
-                        {item.rating &&
-                          getStar(item.rating).map((star, i) =>
-                            star == "color" ? (
-                              <FaStar key={i} className="text-yellow-300" />
-                            ) : star == "half" ? (
-                              <FaStarHalfAlt
-                                key={i}
-                                className="text-yellow-300"
-                              />
-                            ) : (
-                              <FaStar key={i} className="text-gray-400" />
-                            ),
-                          )}
-                      </div>
-                    </div>
-                  )}
+                  
+                  </div>
+                  <div className="p-3 bg-gray-200 rounded-[50%] group-hover:text-white group-hover:bg-primary"><Handbag size={20}/> </div>
+                  </div>
                 </div>
               ))}
             </div>
