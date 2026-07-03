@@ -16,7 +16,7 @@ const Category = () => {
   }, []);
 
   return (
-    <ProductShowcase allData={allCategory} title="Popular Categories"/>
+    <ProductShowcase allData={allCategory} title="Popular Categories" type="category"/>
   )
 };
 

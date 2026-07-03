@@ -52,11 +52,11 @@ const FeaturedPro = ({ allData, title, type, link }) => {
                   key={item.id}
                   className="relative text-[14px] text-[#4D4D4D] border border-[1px] border-[#E5E5E5]  px-4 py-6 hover:border-[1px] hover:border-primary group"
                 >
-                  <img src={Product1} alt="Product1" className="w-full pb-6" />
+                  <img src={item.thumbnail} alt="item.title" className="w-full pb-6" />
 
                   <div className="flex items-center justify-between">
                     <div>
-                  <h3>{item.name || item.title.slice(0, 16) + "..."}</h3>
+                  <h3>{item.name || item.title.slice(0, 25) + "..."}</h3>
                   <p className="text-[16px] text-[#1A1A1A]">{item.price && "$" + item.price}</p>
 
                   {/* <p>{item.rating && item.rating}</p> */}
