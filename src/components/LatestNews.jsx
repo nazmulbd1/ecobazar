@@ -9,6 +9,7 @@ import { BiComment } from "react-icons/bi";
 import { Link } from "react-router";
 
 const LatestNews = () => {
+  
   return (
     <div>
       <Container>
