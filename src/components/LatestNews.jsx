@@ -1,7 +1,9 @@
 import React from "react";
 import Container from "./layouts/Container";
 import { MoveRight, PencilIcon } from "lucide-react";
-import Latestnews1 from "../assets/images/Latestnews1.webp";
+import LatestNews1 from "../assets/images/LatestNews1.webp";
+import LatestNews2 from "../assets/images/LatestNews2.webp";
+import LatestNews3 from "../assets/images/LatestNews3.webp";
 import { RiAdminFill } from "react-icons/ri";
 import { BiComment } from "react-icons/bi";
 import { Link } from "react-router";
@@ -18,7 +20,7 @@ const LatestNews = () => {
 
             <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
               <div >
-                <img src={Latestnews1} alt="Latestnews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
+                <img src={LatestNews1} alt="LatestNews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
                 <div className="px-6 py-6">
                   <div className="flex gap-6">
                     <div className="flex items-center text-[16px] text-[#4D4D4D] font-pop gap-1.5">
@@ -49,7 +51,7 @@ const LatestNews = () => {
 
             <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
               <div >
-                <img src={Latestnews1} alt="Latestnews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
+                <img src={LatestNews2} alt="LatestNews2" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
                 <div className="px-6 py-6">
                   <div className="flex gap-6">
                     <div className="flex items-center text-[16px] text-[#4D4D4D] font-pop gap-1.5">
@@ -80,7 +82,7 @@ const LatestNews = () => {
 
             <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
               <div >
-                <img src={Latestnews1} alt="Latestnews1" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
+                <img src={LatestNews3} alt="LatestNews3" className="transform-gpu transition-transform duration-300 ease-in-out will-change-transform group-hover:scale-[1.03]"/>
                 <div className="px-6 py-6">
                   <div className="flex gap-6">
                     <div className="flex items-center text-[16px] text-[#4D4D4D] font-pop gap-1.5">

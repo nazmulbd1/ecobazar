@@ -50,7 +50,7 @@ const FeaturedPro = ({ allData, title, type, link }) => {
               {allData.map((item, index) => (
                 <div
                   key={item.id}
-                  className="relative text-[14px] text-[#4D4D4D] border border-[1px] border-[#E5E5E5]  px-4 py-6 hover:border-[1px] hover:border-primary group"
+                  className="relative text-[14px] text-[#4D4D4D] border border-[1px] border-[#E5E5E5]  px-4 py-6 hover:border-[1px] hover:border-primary group hover:shadow-[0_0_10px_0px_rgba(0,0,0,0.2)] transition-all duration-300"
                 >
                   <img src={item.thumbnail} alt="item.title" className="w-full pb-6" />
 
