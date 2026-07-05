@@ -26,7 +26,6 @@ const FollowUs = () => {
     setImage(imageUrl);
     setShowImg(true);
   };
-
   const imageRef = useRef(null);
   useOutsideClick(imageRef, () => setShowImg(false), showImg);
 
