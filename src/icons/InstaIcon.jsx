@@ -1,6 +1,7 @@
 import React from "react";
 
 const InstaIcon = () => {
+    
   return (
     <svg
       width="25"
