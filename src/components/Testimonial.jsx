@@ -26,12 +26,26 @@ const Testimonial = () => {
               {/* 1st img pegination */}
               <Swiper
                 spaceBetween={16}
-                slidesPerView={3}
+                slidesPerView={1}
                 onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}
                 navigation={{
                   prevEl: ".review-swiper-button-prev",
                   nextEl: ".review-swiper-button-next",
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
                 }}
                 loop={true}
                 modules={[Navigation]}
@@ -121,10 +135,10 @@ const Testimonial = () => {
                         </div>
                       </div>
                       <div className="flex text-[#FF8A00]">
-                        <FaStar /> 
-                        <FaStar /> 
-                        <FaStar /> 
-                        <FaStar /> 
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
                         <FaStar />
                       </div>
                     </div>
@@ -153,10 +167,10 @@ const Testimonial = () => {
                         </div>
                       </div>
                       <div className="flex text-[#FF8A00]">
-                        <FaStar /> 
-                        <FaStar /> 
-                        <FaStar /> 
-                        <FaStar /> 
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
                         <FaStar />
                       </div>
                     </div>

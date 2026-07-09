@@ -20,9 +20,9 @@
 
 /* Banner Swiper slider start */
 .one .review-swiper-button-prev, .review-swiper-button-next {
-  background: rgba(201, 199, 199, 0.377);
-  width: 40px;
-  height: 40px;
+  /* background: rgba(201, 199, 199, 0.377); */
+  /* width: 40px;
+  height: 40px; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -71,9 +71,9 @@
 
 /* two img star */
 .two .review-swiper-button-prev, .review-swiper-button-next {
-  background: rgba(201, 199, 199, 0.377);
-  width: 40px;
-  height: 40px;
+  /* background: rgba(201, 199, 199, 0.377); */
+  /* width: 40px;
+  height: 40px; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -173,8 +173,6 @@
   transition-duration: .3s;
 }
 
-
-
 #checkbox:checked + .toggle #bar2 {
   transform: translateY(12px) rotate(60deg);
   margin-left: 0;
@@ -196,9 +194,9 @@
 
 /* Testimonial start */
 .test .review-swiper-button-prev, .review-swiper-button-next {
-  background: rgba(201, 199, 199, 0.377);
-  width: 40px;
-  height: 40px;
+  /* background: rgba(201, 199, 199, 0.377); */
+  /* width: 40px;
+  height: 40px; */
   border-radius: 50%;
   display: flex;
   justify-content: center;

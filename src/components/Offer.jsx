@@ -11,25 +11,25 @@ const Offer = () => {
   return (
     <div>
       <Container>
-        <div className="flex gap-6 pt-15">
+        <div className="sm:flex gap-6 pt-15">
           {/* First Image */}
           <div className="relative">
             <img src={BestDeals} alt="BestDeals" />
             
 
             {/* Timer */}
-            <div className="absolute top-27 left-1/2 -translate-x-1/2">
+            <div className="absolute top-18 sm:top-27 left-1/2 -translate-x-1/2">
             <Timer/>
             </div> 
           </div>
 
           {/* Second Image */}
-          <div>
+          <div className="hidden sm:block">
             <img src={FatFree} alt="FatFree" />
           </div>
 
           {/* Third Image */}
-          <div>
+          <div className="hidden sm:block">
             <img src={Summer} alt="Summer" />
           </div>
         </div>

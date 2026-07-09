@@ -47,34 +47,34 @@ const Timer = () => {
   }, []);
 
   return (
-      <div className="flex items-center gap-2 text-white px-8 py-3 rounded-md">
+      <div className="flex font-pop items-center gap-2 text-white px-8 py-3 rounded-md">
         <div className="flex text-center gap-2">
           <div>
-            <h2 className="text-4xl font-bold">{timeLeft.days}</h2>
-            <p className="pt-1 text-[12px] uppercase tracking-widest">Days</p>
+            <h2 className="text-2xl sm:text-4xl font-bold">{timeLeft.days}</h2>
+            <p className="pt-1 text-[10px] sm:text-[12px] uppercase tracking-widest">Days</p>
           </div>
-          <span className="text-3xl items-center">:</span>
+          <span className="text-[20px] sm:text-3xl items-center">:</span>
         </div>
 
         <div className="flex text-center gap-2">
           <div>
-            <h2 className="text-4xl font-bold">{timeLeft.hours}</h2>
-            <p className="pt-1 text-[12px] uppercase tracking-widest">Hours</p>
+            <h2 className="text-2xl sm:text-4xl font-bold">{timeLeft.hours}</h2>
+            <p className="pt-1 text-[10px] sm:text-[12px] uppercase tracking-widest">Hours</p>
           </div>
-          <span className="text-3xl items-center">:</span>
+          <span className="text-[20px] sm:text-3xl items-center">:</span>
         </div>
 
         <div className="flex text-center gap-2">
           <div>
-            <h2 className="text-4xl font-bold">{timeLeft.minutes}</h2>
-            <p className="pt-1 text-[12px] uppercase tracking-widest">Mins</p>
+            <h2 className="text-2xl sm:text-4xl font-bold">{timeLeft.minutes}</h2>
+            <p className="pt-1 text-[10px] sm:text-[12px] uppercase tracking-widest">Mins</p>
           </div>
-          <span className="text-3xl items-center">:</span>
+          <span className="text-[20px] sm:text-3xl items-center">:</span>
         </div>
 
         <div className="text-center">
-          <h2 className="text-4xl font-bold">{timeLeft.seconds}</h2>
-          <p className="pt-1 text-[12px] uppercase tracking-widest">Secs</p>
+          <h2 className="text-2xl sm:text-4xl font-bold">{timeLeft.seconds}</h2>
+          <p className="pt-1 text-[10px] sm:text-[12px] uppercase tracking-widest">Secs</p>
         </div>
       </div>
   );

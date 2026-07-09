@@ -17,7 +17,7 @@ const LatestNews = () => {
           <h3 className="text-[32px] text-[#1A1A1A] font-semibold font-pop text-center pb-8">
             Latest News
           </h3>
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-6">
 
             <div className="rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] overflow-hidden group">
               <div >

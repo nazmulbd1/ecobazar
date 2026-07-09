@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className='bg-black'>
         <Container>
-            <div className='flex text-white justify-between items-center py-15'>
+            <div className='flex flex-wrap text-white justify-between items-center py-15'>
                 <div>
                     <img src={Footer_Logo} alt="Footer_Logo" />
                     <p className='max-w-84 pt-4 pb-5.5 text-[#999999]'>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h5 className='text-base font-pop font-semibold mb-5'>My Account</h5>
+                    <h5 className='text-base font-pop font-semibold mb-5 mt-5 sm:mt-0'>My Account</h5>
                     <ul className='text-sm text-[#999999] font-pop flex flex-col gap-3'>
                         <li className='hover:text-white'>My Account</li>
                         <li className='hover:text-white'>Order History</li>
@@ -32,7 +32,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h5 className='text-base font-pop font-semibold mb-5'>Helps</h5>
+                    <h5 className='text-base font-pop font-semibold mb-5 mt-5 sm:mt-0'>Helps</h5>
                     <ul className='text-sm text-[#999999] font-pop flex flex-col gap-3'>
                         <li className='hover:text-white'>Contact</li>
                         <li className='hover:text-white'>FAQS</li>
@@ -41,7 +41,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h5 className='text-base font-pop font-semibold mb-5'>Proxy</h5>
+                    <h5 className='text-base font-pop font-semibold mb-5 mt-5 sm:mt-0'>Proxy</h5>
                     <ul className='text-sm text-[#999999] font-pop flex flex-col gap-3'>
                         <li className='hover:text-white'>About</li>
                         <li className='hover:text-white'>Shop</li>
@@ -50,7 +50,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h5 className='text-base font-pop font-semibold mb-5'>Categories</h5>
+                    <h5 className='text-base font-pop font-semibold mb-5 mt-5 sm:mt-0'>Categories</h5>
                     <ul className='text-sm text-[#999999] font-pop flex flex-col gap-3'>
                         <li className='hover:text-white'>Fruit & Vegetables</li>
                         <li className='hover:text-white'>Meat & Fish</li>

@@ -21,7 +21,7 @@ const Banner = () => {
     <div>
       <Container>
         {/* Banner start */}
-        <div className="flex gap-x-6 pt-6">
+        <div className="sm:flex gap-x-6 pt-6">
           <div className="one max-w-[872px] relative">
             {/* 1st img pegination */}
             <Swiper
@@ -41,28 +41,28 @@ const Banner = () => {
               modules={[Navigation, Scrollbar, Autoplay]}
             >
               <SwiperSlide>
-                <img className="max-w-[872px]" src={BannerBig} alt="Banner" />
+                <img className="sm:max-w-[872px]" src={BannerBig} alt="Banner" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="max-w-[872px]" src={BannerBig} alt="Banner" />
+                <img className="sm:max-w-[872px]" src={BannerBig} alt="Banner" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="max-w-[872px]" src={BannerBig} alt="Banner" />
+                <img className="sm:max-w-[872px]" src={BannerBig} alt="Banner" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="max-w-[872px]" src={BannerBig} alt="Banner" />
+                <img className="sm:max-w-[872px]" src={BannerBig} alt="Banner" />
               </SwiperSlide>
             </Swiper>
 
-            <div className="review-swiper-button-prev text-gray-800">
-              <FaChevronLeft size={20} />
+            <div className="review-swiper-button-prev w-5 h-5 sm:w-10 sm:h-10 bg-red-500/40 sm:bg-gray-50/20 sm:text-gray-800">
+              <FaChevronLeft className="text-[12px] sm:text-[20px]" />
             </div>
-            <div className="review-swiper-button-next text-gray-800">
-              <FaChevronRight size={20} />
+            <div className="review-swiper-button-next w-5 h-5 sm:w-10 sm:h-10 bg-red-500/40 sm:bg-gray-50/20 sm:text-gray-800">
+              <FaChevronRight className="text-[12px] sm:text-[15px]" />
             </div>
           </div>
 
-          <div className="max-w-[423px]">
+          <div className="hidden sm:block sm:max-w-[423px]">
             <div className="two">
               {/* 2nd img pegination */}
               <Swiper
@@ -82,16 +82,16 @@ const Banner = () => {
                 modules={[Pagination, Autoplay]}
               >
                 <SwiperSlide>
-                  <img src={Banner1} alt="Banner1" />
+                  <img className="w-full sm:w-auto" src={Banner1} alt="Banner1"/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={Banner1} alt="Banner1" />
+                  <img className="w-full sm:w-auto" src={Banner1} alt="Banner1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={Banner1} alt="Banner1" />
+                  <img className="w-full sm:w-auto" src={Banner1} alt="Banner1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={Banner1} alt="Banner1" />
+                  <img className="w-full sm:w-auto" src={Banner1} alt="Banner1" />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -134,7 +134,7 @@ const Banner = () => {
         {/* Banner end */}
 
         {/* Feature Bar start */}
-        <div className="flex justify-around border border-0 rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] my-6">
+        <div className="flex flex-wrap sm:flex-nowrap justify-around border border-0 rounded-lg shadow-[0_0_10px_0px_rgba(0,0,0,0.1)] my-6">
           <div className="flex items-center py-10">
             <div className="pr-4">
               <Delivery />

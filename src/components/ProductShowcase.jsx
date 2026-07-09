@@ -74,15 +74,15 @@ const ProductShowcase = ({ allData, title, type, link }) => {
   return (
     <div>
       <Container>
-        <div className="flex justify-between items-center font-pop py-4 mb-4 mt-10 ">
-          <h2 className="font-semibold text-[32px] text-[#1A1A1A]">{title}</h2>
-          <Link to={link} className="flex gap-2 text-[16px] text-primary">
+        <div className="sm:flex justify-between items-center font-pop py-4 mb-4 mt-10 ">
+          <h2 className="font-semibold text-[25px] sm:text-[32px] text-[#1A1A1A]">{title}</h2>
+          <Link to={link} className="flex gap-2 text-[14px] sm:text-[16px] text-primary">
             View All <MoveRight />{" "}
           </Link>
         </div>
 
         <div
-          className={`grid ${type === "category" ? "text-center grid-cols-6" : "grid-cols-5"} ${type == "category" && "gap-5"}`}
+          className={`grid ${type === "category" ? "text-center grid-cols-2 sm:grid-cols-6" : "grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-0"} ${type == "category" && "gap-5"}`}
         >
           {allData.map((item, index) => {
             const isLastColumn = index % columns >= columns -2;
@@ -91,7 +91,7 @@ const ProductShowcase = ({ allData, title, type, link }) => {
           return (
             <div
               key={item.id}
-              className={`relative border border-[1px] border-[#E5E5E5] px-4 py-6 hover:border-[1px] hover:text-primary hover:border-primary cursor-pointer transition-all hover:shadow-[0_0_10px_0px_rgba(0,0,0,0.2)] duration-300 ${type == "category" ? "text-[18px] text-[#1A1A1A] font-medium  rounded-md" : "text-[14px] text-[#4D4D4D]"} group`}
+              className={`relative border border-[1px] border-[#E5E5E5] px-4 py-6 hover:border-[1px] hover:text-primary hover:border-primary cursor-pointer transition-all hover:shadow-[0_0_10px_0px_rgba(0,0,0,0.2)] duration-300 ${type == "category" ? "text-[18px] text-[#1A1A1A] font-medium  rounded-md" : "text-[14px] text-[#4D4D4D] mt-3 sm:mt-0"} group`}
             >
               {type === "category" ? (
                 <img src={Product1} alt={item.name} className="w-full h-[120px] object-contain pb-6"/>
@@ -134,7 +134,7 @@ const ProductShowcase = ({ allData, title, type, link }) => {
                 )}
               </div>
               {type == "hotdeal" && (
-                <div className={`bg-white border w-[202%] h-[202%] absolute z-40 m-2 flex flex-col items-center justify-center gap-2 opacity-0 invisible -translate-7 group-hover:opacity-100 group-hover:visible group-hover:-translate-0 transition-all duration-300 ease-out hover:shadow-[0_0_10px_0px_rgba(0,0,0,0.2)] ${isLastColumn ? "right-[-9px]" : "left-[-9px]"} ${isLastRow ? "bottom-[-9px]" : "top-[-9px]"}`}>
+                <div className={`hidden sm:block bg-white border w-[202%] h-[202%] absolute z-40 m-2 flex flex-col items-center justify-center gap-2 opacity-0 invisible -translate-7 group-hover:opacity-100 group-hover:visible group-hover:-translate-0 transition-all duration-300 ease-out hover:shadow-[0_0_10px_0px_rgba(0,0,0,0.2)] ${isLastColumn ? "right-[-9px]" : "left-[-9px]"} ${isLastRow ? "bottom-[-9px]" : "top-[-9px]"}`}>
                   <img src={item.thumbnail} alt={item.title} className="w-[60%]"/>
                   <div className="flex gap-4 pb-7.5 items-center">
                     <Heart className="cursor-pointer text-gray-500" />

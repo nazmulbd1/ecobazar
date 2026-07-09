@@ -32,7 +32,7 @@ const FollowUs = () => {
   return (
     <div>
       <Container>
-        <div className="flex py-15">
+        <div className="flex flex-wrap justify-center gap-y-5 py-15">
           <img
             src={steps}
             alt="steps"
