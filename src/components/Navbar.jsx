@@ -104,10 +104,10 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to="/shop"
                     className="flex items-center gap-x-1 hover:text-white transform duration-300"
                   >
-                    Shop <FaAngleDown />
+                    Shop <FaAngleDown /> 
                   </Link>
                 </li>
                 <li>
