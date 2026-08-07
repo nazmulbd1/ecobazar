@@ -6,6 +6,7 @@ import MainLayouts from "./components/layouts/MainLayouts";
 import Faq from "./pages/Faq";
 import Category from "./pages/Category";
 import Product from "./pages/Product";
+import Shop from "./pages/Shop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/faq"  element={<Faq/>}/>
           <Route path="/category" element={<Category/>}/>
           <Route path="/product" element={<Product/>}/>
+          <Route path="/shop" element={<Shop/>}/>
         </Route>
       </Routes>
     </>
