@@ -6,7 +6,7 @@ import axios from "axios";
 import ShopProduct from "../components/ShopProduct";
 
 const Shop = () => {
-  let [product, setProduct] = useState([])
+  const [product, setProduct] = useState([])
 
   useEffect(()=>{
     async function getProduct(){
@@ -23,12 +23,13 @@ const Shop = () => {
         <div className="w-[312px]">
           <According
             className="border-b border-gray-300 pb-4 text-[#1A1A1A] font-pop"
-            classbtn="w-full text-[20px] font-medium justify-between items-center flex"
-            bg={true}
+            classbtn="w-full text-[20px] font-medium justify-between items-center"
             flex={true}
+            bgColor={false}
             Title="All Category"
-            icon={<FaAngleDown />}
+            icon={<FaAngleDown/> }
           >
+            
             <div className="pb-1.5 pt-5">
               <input className="input" hidden id="mycheck1" type="checkbox" />
               <label className="label" htmlFor="mycheck1">Fresh Fruit</label>
@@ -121,8 +122,6 @@ const Shop = () => {
                 <span className="text-[14px] text-[#1A1A1A] pl-2">1.0 & up</span>
               </label>
             </div>
-
-
           </According>
 
 
