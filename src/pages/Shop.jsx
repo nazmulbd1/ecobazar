@@ -84,14 +84,14 @@ const Shop = () => {
           >
             <div className="flex py-2 pt-5">
               <input id="rating1" type="checkbox" />
-              <label className="flex gap-1 text-[#FF8A00] items-center pl-3" htmlFor="rating1">
+              <label className="flex gap-1 text-[14px] text-[#FF8A00] items-center pl-3" htmlFor="rating1">
                 <FaStar/><FaStar/><FaStar/><FaStar/><FaStar/> 
                 <span className="text-[14px] text-[#1A1A1A] pl-2">5.0</span>
               </label>
             </div>
             <div className="flex py-2">
               <input id="rating2" type="checkbox" />
-              <label className="flex gap-1 text-[#FF8A00] items-center pl-3" htmlFor="rating2">
+              <label className="flex gap-1 text-[14px] text-[#FF8A00] items-center pl-3" htmlFor="rating2">
                 <FaStar/><FaStar/><FaStar/><FaStar/>
                 <span className="text-[#CCCCCC]"><FaStar/> </span> 
                 <span className="text-[14px] text-[#1A1A1A] pl-2">4.0 & up</span>
@@ -99,7 +99,7 @@ const Shop = () => {
             </div>
             <div className="flex py-2">
               <input id="rating3" type="checkbox" />
-              <label className="flex gap-1 text-[#FF8A00] items-center pl-3" htmlFor="rating3">
+              <label className="flex gap-1 text-[14px] text-[#FF8A00] items-center pl-3" htmlFor="rating3">
                 <FaStar/><FaStar/><FaStar/>
                 <span className="flex gap-1 text-[#CCCCCC]"><FaStar/><FaStar/></span> 
                 <span className="text-[14px] text-[#1A1A1A] pl-2">3.0 & up</span>
@@ -107,7 +107,7 @@ const Shop = () => {
             </div>
             <div className="flex py-2">
               <input id="rating4" type="checkbox" />
-              <label className="flex gap-1 text-[#FF8A00] items-center pl-3" htmlFor="rating4">
+              <label className="flex gap-1 text-[14px] text-[#FF8A00] items-center pl-3" htmlFor="rating4">
                 <FaStar/><FaStar/>
                 <span className="flex gap-1 text-[#CCCCCC]"><FaStar/><FaStar/><FaStar/> </span> 
                 <span className=" text-[14px] text-[#1A1A1A] pl-2">2.0 & up</span>
@@ -115,7 +115,7 @@ const Shop = () => {
             </div>
             <div className="flex py-2">
               <input id="rating5" type="checkbox" />
-              <label className="flex gap-1 text-[#FF8A00] items-center pl-3" htmlFor="rating5">
+              <label className="flex gap-1 text-[14px] text-[#FF8A00] items-center pl-3" htmlFor="rating5">
                 <FaStar/>
                 <span className="flex gap-1 text-[#CCCCCC]"><FaStar/><FaStar/><FaStar/><FaStar/> </span> 
                 <span className="text-[14px] text-[#1A1A1A] pl-2">1.0 & up</span>
