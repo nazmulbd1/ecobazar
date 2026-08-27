@@ -10,7 +10,7 @@ const According = ({
   bgColor,
   children,
 }) => {
-  let [show, setShow] = useState(false);
+  let [show, setShow] = useState(true);
 
   return (
     <div className={`${className}`}>

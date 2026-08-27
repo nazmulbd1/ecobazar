@@ -268,5 +268,25 @@
 }
 
 
+/* Popular Tag Start________ */
+.twolabel {
+  background: #F2F2F2;
+  color: #1A1A1A;
+  font-size: 16px;
+  font-family: pop;
+  padding: 8px 18px;
+  display: inline-block;
+  border-radius: 100px;
+}
+.two:checked + .twolabel {
+  background: #00B207;
+  color: #ffff;
+}
+
+
+
+
+/* Popular Tag end________ */
+
 
 /* shop page end */
