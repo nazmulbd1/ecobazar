@@ -4,9 +4,12 @@ import { FaAngleDown, FaStar } from "react-icons/fa";
 import According from "../components/According";
 import axios from "axios";
 import ShopProduct from "../components/ShopProduct";
+import { current } from "@reduxjs/toolkit";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Shop = () => {
   const [product, setProduct] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     async function getProduct() {
@@ -15,6 +18,11 @@ const Shop = () => {
     }
     getProduct();
   }, []);
+
+  let perPage = 6;
+  let paginationList = product.length/perPage
+  let arr = new Array(paginationList).fill(0)
+  let showPro = product.slice((perPage * currentPage) - 6, perPage * currentPage)
 
   return (
     <Container>
@@ -71,7 +79,6 @@ const Shop = () => {
               </label>
             </div>
           </According>
-
           <According
             className="border-b border-gray-300 py-4 text-[#1A1A1A] font-pop"
             classbtn="w-full text-[20px] font-medium justify-between items-center flex"
@@ -87,7 +94,6 @@ const Shop = () => {
               </label>
             </div>
           </According>
-
           <According
             className="border-b border-gray-300 py-4 text-[#1A1A1A] font-pop"
             classbtn="w-full text-[20px] font-medium justify-between items-center flex"
@@ -191,7 +197,6 @@ const Shop = () => {
               </label>
             </div>
           </According>
-
           <According
             className="py-4 text-[#1A1A1A] font-pop"
             classbtn="w-full text-[20px] pb-4 font-medium justify-between items-center flex"
@@ -279,17 +284,21 @@ const Shop = () => {
                   Fruit
                 </label>
               </div>
-
-
-
             </div>
 
 
           </According>
         </div>
         <div className="w-[984px] h-250">
-          <ShopProduct allData={product.slice(0, 6)} />
-        </div>
+          <ShopProduct type="products" allData={showPro} />
+          <ul className="flex pt-10 justify-center gap-1">
+            <li className="py-1 px-1 bg-gray-200 text-gray-700 rounded-3xl "> <ChevronLeft/> </li>
+            {arr.map((item, index)=>(
+              <li onClick={()=>setCurrentPage(index+1)} className={`${currentPage == (index+1) ? "bg-[#00B207] text-[#ffff]" : "bg-gray-100 text-gray-500"} py-1 px-3 rounded-3xl `}>{index+1}</li>
+            ))}
+            <li className="py-1 px-1 bg-gray-200 rounded-3xl text-gray-700"> <ChevronRight/> </li>
+          </ul>
+        </div> 
       </div>
     </Container>
   );
