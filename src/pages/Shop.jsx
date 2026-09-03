@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Shop = () => {
   const [product, setProduct] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     async function getProduct() {
@@ -19,10 +19,35 @@ const Shop = () => {
     getProduct();
   }, []);
 
+  const categories = [
+    { id: 1, name: "Fresh Fruit" },
+    { id: 2, name: "Vegetables" },
+    { id: 3, name: "Cooking" },
+    { id: 4, name: "Snacks" },
+    { id: 5, name: "Beverages" },
+    { id: 6, name: "Beauty & Health" },
+    { id: 7, name: "Bread & Bakery" },
+  ];
+
   let perPage = 6;
-  let paginationList = product.length/perPage
-  let arr = new Array(paginationList).fill(0)
-  let showPro = product.slice((perPage * currentPage) - 6, perPage * currentPage)
+  let totalPage = Math.ceil(product.length / perPage);
+  let arr = new Array(totalPage).fill(0);
+
+  let showPro = product.slice(
+    (currentPage - 1) * perPage,
+    currentPage * perPage,
+  );
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  const handleNext = () => {
+    if (currentPage < totalPage) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <Container>
@@ -36,48 +61,22 @@ const Shop = () => {
             Title="All Category"
             icon={<FaAngleDown />}
           >
-            <div className="pb-1.5 pt-5">
-              <input className="input" hidden id="mycheck1" type="checkbox" />
-              <label className="label" htmlFor="mycheck1">
-                Fresh Fruit
-              </label>
-            </div>
-            <div className="py-1.5">
-              <input className="input" hidden id="mycheck2" type="checkbox" />
-              <label className="label" htmlFor="mycheck2">
-                Vegetables
-              </label>
-            </div>
-            <div className="py-1.5">
-              <input className="input" hidden id="mycheck3" type="checkbox" />
-              <label className="label" htmlFor="mycheck3">
-                Cooking
-              </label>
-            </div>
-            <div className="py-1.5">
-              <input className="input" hidden id="mycheck4" type="checkbox" />
-              <label className="label" htmlFor="mycheck4">
-                Snacks
-              </label>
-            </div>
-            <div className="py-1.5">
-              <input className="input" hidden id="mycheck5" type="checkbox" />
-              <label className="label" htmlFor="mycheck5">
-                Beverages
-              </label>
-            </div>
-            <div className="py-1.5">
-              <input className="input" hidden id="mycheck6" type="checkbox" />
-              <label className="label" htmlFor="mycheck6">
-                Beauty & Health
-              </label>
-            </div>
-            <div className="py-1.5">
-              <input className="input" hidden id="mycheck7" type="checkbox" />
-              <label className="label" htmlFor="mycheck7">
-                Bread & Bakery
-              </label>
-            </div>
+            {categories.map((item) => (
+              <div
+                key={item.id}
+                className={item.id === 1 ? "pb-1.5 pt-5" : "py-1.5"}
+              >
+                <input
+                  className="input"
+                  hidden
+                  id={`mycheck ${item.id}`}
+                  type="checkbox"
+                />
+                <label className="label" htmlFor={`mycheck ${item.id}`}>
+                  {item.name}
+                </label>
+              </div>
+            ))}
           </According>
           <According
             className="border-b border-gray-300 py-4 text-[#1A1A1A] font-pop"
@@ -285,20 +284,36 @@ const Shop = () => {
                 </label>
               </div>
             </div>
-
-
           </According>
         </div>
         <div className="w-[984px] h-250">
           <ShopProduct type="products" allData={showPro} />
           <ul className="flex pt-10 justify-center gap-1">
-            <li className="py-1 px-1 bg-gray-200 text-gray-700 rounded-3xl "> <ChevronLeft/> </li>
-            {arr.map((item, index)=>(
-              <li onClick={()=>setCurrentPage(index+1)} className={`${currentPage == (index+1) ? "bg-[#00B207] text-[#ffff]" : "bg-gray-100 text-gray-500"} py-1 px-3 rounded-3xl `}>{index+1}</li>
+            <li
+              onClick={handlePrevious}
+              className={`py-1 px-1 rounded-3xl ${currentPage === 1 ? "border border-gray-300 bg-gray-100 text-gray-300 cursor-not-allowed" : "bg-gray-200 text-gray-700 cursor-pointer"}`}
+            >
+              {" "}
+              <ChevronLeft />{" "}
+            </li>
+
+            {arr.map((item, index) => (
+              <li
+                onClick={() => setCurrentPage(index + 1)}
+                className={`${currentPage == index + 1 ? "bg-[#00B207] text-[#ffff]" : "bg-gray-100 text-gray-500"} py-1 px-3 rounded-3xl cursor-pointer`}
+              >
+                {index + 1}
+              </li>
             ))}
-            <li className="py-1 px-1 bg-gray-200 rounded-3xl text-gray-700"> <ChevronRight/> </li>
+            <li
+              onClick={handleNext}
+              className={`py-1 px-1 rounded-3xl ${currentPage === totalPage ? "border border-gray-300 bg-gray-100 text-gray-300 cursor-not-allowed" : "bg-gray-200 text-gray-700 cursor-pointer"}`}
+            >
+              {" "}
+              <ChevronRight />{" "}
+            </li>
           </ul>
-        </div> 
+        </div>
       </div>
     </Container>
   );
