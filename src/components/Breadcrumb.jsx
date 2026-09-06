@@ -15,7 +15,7 @@ const Breadcrumb = () => {
             <Link to='/'><GrHomeRounded className='text-2xl text-[#808080]'/></Link>
             {
               arr.map((item, index)=>(
-                <span key={index} className='font-pop text-[16px] text-[#999999]'>
+                <span key={index} className='font-pop text-[16px] text-[#00B207]'>
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                   {index < arr.length -1 && <span className='mx-2 text-[#999999]'>{'/'.replace('/', '>')}</span>}
                 </span>
