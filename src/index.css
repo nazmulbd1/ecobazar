@@ -290,3 +290,20 @@
 
 
 /* shop page end */
+.product-thumbs .swiper-slide {
+  width: 72px !important;
+  cursor: pointer;
+}
+
+.product-thumbs .swiper-slide-thumb-active > div {
+  border: 1px solid #55a630;
+}
+
+.product-thumbs .swiper-slide {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.product-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
