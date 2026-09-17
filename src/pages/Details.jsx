@@ -209,7 +209,7 @@ export default function Details() {
                 </div>
               </div>
               <button className="bg-primary hover:bg-[#02971b] text-white text-[16px] font-semibold px-40 py-4 rounded-4xl">
-                Add to Cart
+                Add to Cart         
               </button>
               <div className="bg-green-100 px-4 py-4 rounded-full hover:bg-primary duration-300 group">
                 <Heart className="cursor-pointer text-green-900 group-hover:text-white" />
