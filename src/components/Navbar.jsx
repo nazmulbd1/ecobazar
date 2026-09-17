@@ -113,17 +113,21 @@ const Navbar = () => {
                     <li> <Link to="/shop" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Shop</Link> </li>
                     <li> <Link to="/shop" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Shop List</Link> </li>
                     <li> <Link to="/details" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Product Details</Link> </li>
-                    <li> <Link to="/shop" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Shopping Cart</Link> </li>
-                    <li> <Link to="/shop" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Check Out</Link> </li>
+                    <li> <Link to="/cart" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Shopping Cart</Link> </li>
+                    <li> <Link to="/checkout" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Check Out</Link> </li>
                   </ul>
                 </li>
-                <li>
+                <li className="relative group">
                   <Link
                     to="#"
                     className="flex items-center gap-x-1 hover:text-white transform duration-300"
                   >
-                    Pages <FaAngleDown />
+                    Pages <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" /> 
                   </Link>
+                  <ul className="absolute top-full left-0 mt-4 w-[150px] bg-white text-gray-600 shadow-lg  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded" >
+                    <li> <Link to="/wishlist" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Wish List</Link> </li>
+                    <li> <Link to="/cart" className="block px-5 py-3 hover:bg-primary hover:text-white transition rounded">Shopping Cart</Link> </li>
+                  </ul>
                 </li>
                 <li>
                   <Link
